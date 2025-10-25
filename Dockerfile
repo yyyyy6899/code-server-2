@@ -7,7 +7,8 @@ ENV PUID=1000 \
     PASSWORD=password \
     DEFAULT_WORKSPACE=/config/workspace \
     PWA_APPNAME=code-server
-
+    
+USER root
 # Remove SUDO_PASSWORD to disable sudo password requirement
 # Remove SUDO_PASSWORD_HASH as well
 
