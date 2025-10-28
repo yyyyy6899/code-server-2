@@ -5,9 +5,9 @@ services:
     plan: starter
     env:
       - key: PUID
-        value: 1000
+        value: 0
       - key: PGID
-        value: 1000
+        value: 0
       - key: TZ
         value: Etc/UTC
       - key: PASSWORD
