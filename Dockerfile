@@ -1,8 +1,8 @@
 FROM lscr.io/linuxserver/code-server:latest
 
 # Set environment variables to run as root
-ENV PUID=1000 \
-    PGID=1000 \
+ENV PUID=0 \
+    PGID=0 \
     TZ=Etc/UTC \
     PASSWORD=password \
     DEFAULT_WORKSPACE=/config/workspace \
