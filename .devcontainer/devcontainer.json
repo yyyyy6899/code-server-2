@@ -1,12 +1,23 @@
 {
-  "name": "Minimal Docker Environment",
-  "image": "mcr.microsoft.com/devcontainers/base:debian",
-  
+  "name": "Zen Browser Development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "zen",
+  "workspaceFolder": "/config",
+
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {
-      "version": "latest",
-      "moby": true,
-      "dockerDashComposeVersion": "v2"
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+
+  "forwardPorts": [3000, 3001],
+  
+  "portsAttributes": {
+    "3000": {
+      "label": "Zen Main Port",
+      "onAutoForward": "notify"
+    },
+    "3001": {
+      "label": "Zen Secondary Port",
+      "onAutoForward": "notify"
     }
   },
 
@@ -16,5 +27,5 @@
     }
   },
 
-  "remoteUser": "vscode"
+  "postCreateCommand": "echo 'Zen container is ready!'"
 }
