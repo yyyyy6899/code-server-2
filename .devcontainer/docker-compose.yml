@@ -1,0 +1,18 @@
+services:
+  zen:
+    image: lscr.io/linuxserver/zen:latest
+    container_name: zen
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - zen-config:/config
+    ports:
+      - 3000:3000
+      - 3001:3001
+    shm_size: "1gb"
+    restart: unless-stopped
+
+volumes:
+  zen-config:
