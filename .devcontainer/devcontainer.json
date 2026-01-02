@@ -1,0 +1,20 @@
+{
+  "name": "Minimal Docker Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "moby": true,
+      "dockerDashComposeVersion": "v2"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  },
+
+  "remoteUser": "vscode"
+}
