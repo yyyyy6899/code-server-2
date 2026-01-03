@@ -1,31 +1,7 @@
 {
-  "name": "Zen Browser Development",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "zen",
-  "workspaceFolder": "/config",
-
+  "name": "Minimal Docker Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-
-  "forwardPorts": [3000, 3001],
-  
-  "portsAttributes": {
-    "3000": {
-      "label": "Zen Main Port",
-      "onAutoForward": "notify"
-    },
-    "3001": {
-      "label": "Zen Secondary Port",
-      "onAutoForward": "notify"
-    }
-  },
-
-  "customizations": {
-    "vscode": {
-      "extensions": []
-    }
-  },
-
-  "postCreateCommand": "echo 'Zen container is ready!'"
+  }
 }
