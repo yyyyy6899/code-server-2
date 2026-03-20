@@ -13,6 +13,8 @@ USER root
 RUN apt-get update && apt-get install -y \
     wget \
     build-essential \
+    htop \
+    nano \
     gcc \
     g++ \
     python3 \
